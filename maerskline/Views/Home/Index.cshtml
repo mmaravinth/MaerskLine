@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<div class="jumbotron">
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>*@
+
+<hr>
+<h1>Maersk Line Container Management System</h1>
+<h3>Welcome to Maersk Line from Central US</h3>
+        <div class="row">
+            <div class="col-md-8">
+                
+                <a href='@Url.Action("Index", "Home")'>
+                    <img src='@Url.Content("~/Content/img/maersk_image_home.jpg")' style="height:370px" />
+                </a>
+                <p>
+                    Maersk Line is the global container division and the largest operating unit of the
+                    A.P. Moller – Maersk Group, a Danish business conglomerate. It is the world's largest
+                    container shipping company having customers through 374 offices in 116 countries. It
+                    employs approximately 7,000 sea farers and approximately 25,000 land-based people. Maersk
+                    Line operates over 600 vessels and has a capacity of 2.6 million TEU. The company was
+                    founded in 1928.
+                </p>
+                <p><a class="btn btn-success" href="http://www.maersk.com/en/the-maersk-group/about-us">More Details &raquo;</a></p>
+            </div>
+
+        </div>

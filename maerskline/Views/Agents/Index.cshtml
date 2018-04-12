@@ -1,0 +1,69 @@
+﻿@model IEnumerable<maerskline.Models.Agent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="success">
+        <th>
+            @Html.Label("Ship ID")
+        </th>
+        <th>
+            @Html.Label("Ship Name")
+        </th>
+        <th>
+            @Html.Label("Max Weight")
+        </th>
+        <th>
+            @Html.Label("Agent Firstname")
+        </th>
+        <th>
+            @Html.Label("Agent Lastname")
+        </th>
+        <th>
+            @Html.Label("Agent Email")
+        </th>
+        <th>
+            @Html.Label("Contact")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.shipID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.shipname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.maxweight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentFN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentLN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.agentContact)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.shipID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.shipID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.shipID })
+        </td>
+    </tr>
+}
+
+</table>

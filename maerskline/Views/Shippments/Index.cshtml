@@ -1,0 +1,63 @@
+﻿@model IEnumerable<maerskline.Models.Shippment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="success">
+        <th>
+            @Html.Label("Shipment ID")
+        </th>
+        <th>
+            @Html.Label("Depart Time")
+        </th>
+        <th>
+            @Html.Label("Arrival Time")
+        </th>
+        <th>
+            @Html.Label("Cargo ID")
+        </th>
+        <th>
+            @Html.Label("Warehouse Name")
+        </th>
+        <th>
+            @Html.Label("Warehouse Name")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.shippmentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.departTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.arrivalTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cargo.cargoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warehouse.warehouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Warehouse1.warehouseName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.shippmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.shippmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.shippmentID })
+        </td>
+    </tr>
+}
+
+</table>

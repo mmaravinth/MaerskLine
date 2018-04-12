@@ -1,0 +1,72 @@
+﻿@model maerskline.Models.Agent
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Agent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Ship Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shipname)
+        </dd>
+
+        <dt>
+            @Html.Label("Max Weight")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maxweight)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Firstname")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentFN)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Lastname")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentLN)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentEmail)
+        </dd>
+
+        <dt>
+            @Html.Label("Contact")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentContact)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-success" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

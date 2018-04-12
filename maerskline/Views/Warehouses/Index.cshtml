@@ -1,0 +1,45 @@
+﻿@model IEnumerable<maerskline.Models.Warehouse>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="success">
+        <th>
+            @Html.Label("Warehouse ID")
+        </th>
+        <th>
+            @Html.Label("Warehouse Name")
+        </th>
+        <th>
+            @Html.Label("Warehouse Location")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.warehouseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warehouseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warehouseLocation)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.warehouseID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.warehouseID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.warehouseID })
+        </td>
+    </tr>
+}
+
+</table>

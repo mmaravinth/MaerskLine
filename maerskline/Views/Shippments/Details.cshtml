@@ -1,0 +1,58 @@
+﻿@model maerskline.Models.Shippment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Shippment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Depart Time")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.departTime)
+        </dd>
+
+        <dt>
+            @Html.Label("Arrival Time")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.arrivalTime)
+        </dd>
+
+        <dt>
+            @Html.Label("Cargo ID")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo.cargoID)
+        </dd>
+
+        <dt>
+            @Html.Label("Shipment Source")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse.warehouseName)
+        </dd>
+
+        <dt>
+            @Html.Label("Shipment Destination")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Warehouse1.warehouseName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.shippmentID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

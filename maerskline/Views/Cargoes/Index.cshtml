@@ -1,0 +1,58 @@
+﻿@model IEnumerable<maerskline.Models.Cargo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr class="success">
+
+        <th>
+            @Html.Label("Cargo ID")
+        </th>
+        <th>
+            @Html.Label("Volume")
+        </th>
+        <th>
+            @Html.Label("Weight")
+        </th>
+        <th>
+            @Html.Label("Warehouse ID")
+        </th>
+        <th>
+            @Html.Label("Customer ID")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargoID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.volume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.warehouseID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.customerID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cargoID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cargoID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cargoID })
+        </td>
+    </tr>
+}
+
+</table>

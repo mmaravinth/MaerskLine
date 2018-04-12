@@ -1,0 +1,66 @@
+﻿@model maerskline.Models.Agent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Agent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Ship Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shipname)
+        </dd>
+
+        <dt>
+            @Html.Label("Max Weight")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maxweight)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Firstname")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentFN)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Lastname")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentLN)
+        </dd>
+
+        <dt>
+            @Html.Label("Agent Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentEmail)
+        </dd>
+
+        <dt>
+            @Html.Label("Contact")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.agentContact)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.shipID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
